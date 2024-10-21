@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TestServer.Model;
-
+//Building app
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
