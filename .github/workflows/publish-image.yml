@@ -28,4 +28,4 @@ jobs:
           context: ./TestServer
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME:${{ github.event.release.tag_name }} , ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.event.release.tag_name }} , ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
