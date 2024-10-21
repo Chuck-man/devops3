@@ -18,11 +18,13 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore TestServer/TestServer.sln
+    - name: Restore dependencies TestServer
+      run: dotnet restore ./TestServer
+    - name: Restore dependencies TestServerTests
+      run: dotnet restore ./TestServerTests
     - name: Build TestServer
-      run: dotnet build --no-restore TestServer/TestServer.csproj
+      run: dotnet build --no-restore ./TestServer/TestServer.csproj
     - name: Build TestServerTests
-      run: dotnet build --no-restore TestServerTests/TestServerTests.csproj
+      run: dotnet build --no-restore ./TestServerTests/TestServerTests.csproj
     - name: Test
-      run: dotnet test --no-build --verbosity normal TestServerTests/TestServerTests.csproj
+      run: dotnet test ./TestServerTests/TestServerTests.csproj --no-build --verbosity normal
