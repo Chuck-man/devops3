@@ -4,7 +4,7 @@ on:
   release:
     types: [created]
 env:
-  IMAGE_NAME: test
+  IMAGE_NAME: devops_lab3
 
 jobs:
   call_workflow_build_and_test:
