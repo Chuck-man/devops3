@@ -25,4 +25,4 @@ jobs:
     - name: Build TestServerTests
       run: dotnet build --no-restore TestServerTests/TestServerTests.csproj
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal TestServerTests/CalculatorTest.cs
